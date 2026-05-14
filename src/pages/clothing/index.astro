@@ -2,64 +2,168 @@
 import Layout from '../../layouts/Layout.astro';
 ---
 
-<Layout title="Traditional Clothing" description="Explore Chinese traditional clothing - hanfu, cheongsam, silk embroidery, and the elegant fashion of 5,000 years of civilization.">
-  <section class="bg-gradient-to-br from-pink-600 via-rose-600 to-pink-700 text-white py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<Layout title="Traditional Clothing" description="Explore Chinese traditional clothing - hanfu, cheongsam, silk, and the art of Chinese fashion">
+  
+  <!-- Hero Section -->
+  <section class="relative h-[70vh] flex items-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img
+        src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1920&q=80"
+        alt="Traditional Chinese clothing hanfu"
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-[#1a1a1a]/95 to-[#8E4585]/60"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-2xl">
-        <span class="text-pink-200 text-sm font-medium tracking-wider uppercase">Clothing</span>
-        <h1 class="text-4xl md:text-5xl font-bold mt-2 mb-4">Traditional Clothing</h1>
-        <p class="text-xl text-pink-100">From the flowing robes of Hanfu to the elegant cheongsam, Chinese fashion reflects millennia of craftsmanship and aesthetic philosophy.</p>
+        <span class="inline-block font-heading text-sm tracking-[0.3em] text-[#D4AF37] mb-4">FASHION</span>
+        <h1 class="font-display text-5xl md:text-6xl text-white mb-6">Traditional Clothing</h1>
+        <p class="text-xl text-stone-300 leading-relaxed">
+          From the flowing elegance of hanfu to the sleek sophistication of the qipao, discover China's rich textile heritage.
+        </p>
       </div>
     </div>
   </section>
 
-  <section class="py-16 bg-stone-50">
+  <!-- Hanfu Section -->
+  <section class="py-20 bg-[#FFFEF7]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-2 gap-6">
-        <a href="/clothing/hanfu" class="group bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all">
-          <div class="text-4xl mb-4">👘</div>
-          <h3 class="text-xl font-bold text-stone-900 mb-2 group-hover:text-pink-600 transition-colors">Hanfu</h3>
-          <p class="text-stone-600">The traditional clothing of the Han Chinese—wide sleeves, crossed collars, and elegant flowing lines.</p>
-        </a>
-        <a href="/clothing/cheongsam" class="group bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all">
-          <div class="text-4xl mb-4">🥻</div>
-          <h3 class="text-xl font-bold text-stone-900 mb-2 group-hover:text-pink-600 transition-colors">Cheongsam / Qipao</h3>
-          <p class="text-stone-600">The iconic fitted dress that became a symbol of Chinese femininity worldwide.</p>
-        </a>
-        <a href="/clothing/embroidery" class="group bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all">
-          <div class="text-4xl mb-4">🧵</div>
-          <h3 class="text-xl font-bold text-stone-900 mb-2 group-hover:text-pink-600 transition-colors">Embroidery</h3>
-          <p class="text-stone-600">The four famous embroidery styles: Su, Xiang, Shu, and Yue—each region with its own mastery.</p>
-        </a>
-        <a href="/clothing/silk" class="group bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all">
-          <div class="text-4xl mb-4">🐛</div>
-          <h3 class="text-xl font-bold text-stone-900 mb-2 group-hover:text-pink-600 transition-colors">Silk</h3>
-          <p class="text-stone-600">The fabric that changed world history—China's 5,000-year secret finally revealed.</p>
-        </a>
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <span class="inline-block font-heading text-sm tracking-[0.3em] text-[#C41E3A] mb-4">HERITAGE</span>
+          <h2 class="font-display text-4xl text-[#1a1a1a] mb-6">Hanfu: The Ancient Way</h2>
+          <p class="text-lg text-stone-600 mb-6">
+            Hanfu (汉服) literally means "Han clothing" — the traditional attire of the Han Chinese people worn for over 3,000 years before the Qing Dynasty. Today, a vibrant revival movement is bringing this elegant clothing back to daily life.
+          </p>
+          <p class="text-lg text-stone-600 mb-6">
+            Characterized by its flowing robes, crossed collars (y领), and sash belts, hanfu represents principles of naturalness, restraint, and elegance that define classical Chinese aesthetics.
+          </p>
+          <div class="grid grid-cols-3 gap-4">
+            <div class="text-center p-4 bg-pink-50 rounded-lg">
+              <div class="stat-number text-2xl">3000+</div>
+              <div class="text-sm text-stone-600">Years of History</div>
+            </div>
+            <div class="text-center p-4 bg-pink-50 rounded-lg">
+              <div class="stat-number text-2xl">6</div>
+              <div class="text-sm text-stone-600">Core Elements</div>
+            </div>
+            <div class="text-center p-4 bg-pink-50 rounded-lg">
+              <div class="stat-number text-2xl">4M+</div>
+              <div class="text-sm text-stone-600">Modern Wearers</div>
+            </div>
+          </div>
+        </div>
+        <div class="relative">
+          <img
+            src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=800&q=80"
+            alt="Woman in traditional hanfu"
+            class="rounded-xl shadow-2xl"
+          />
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="py-16 bg-white">
+  <!-- Clothing Types -->
+  <section class="py-20 bg-[#1a1a1a]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl font-bold text-stone-900 mb-8">Featured Articles</h2>
+      <div class="text-center mb-16">
+        <span class="inline-block font-heading text-sm tracking-[0.3em] text-[#D4AF37] mb-4">STYLES</span>
+        <h2 class="font-display text-4xl text-white mb-4">Traditional Styles</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        {[
+          {
+            name: 'Magua',
+            desc: 'A formal jacket worn over robes, traditionally by scholars and officials. Features a distinctive round collar and horse-hoof sleeves.',
+            era: 'Ming Dynasty',
+            color: 'bg-pink-600'
+          },
+          {
+            name: 'Zhongyi',
+            desc: 'A type of deep-robed garment with full sleeves and flowing lines, representing classical Chinese elegance.',
+            era: 'Tang Dynasty',
+            color: 'bg-rose-600'
+          },
+          {
+            name: 'Curtain Dress (Lianshi)',
+            desc: 'Features flowing skirts and elaborate draping. Popular among nobility during the Song Dynasty.',
+            era: 'Song Dynasty',
+            color: 'bg-purple-600'
+          },
+          {
+            name: 'Shan (Upper Garment)',
+            desc: 'A cross-collared upper garment that forms the foundation of many hanfu styles. Simple yet elegant.',
+            era: 'Han Dynasty',
+            color: 'bg-violet-600'
+          }
+        ].map(style => (
+          <div class="bg-stone-800/50 border border-stone-700 rounded-xl overflow-hidden hover:border-pink-500 transition-colors">
+            <div class={`h-2 ${style.color}`}></div>
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="font-display text-2xl text-white">{style.name}</h3>
+                <span class="px-3 py-1 bg-stone-700 text-stone-300 text-sm rounded-full">{style.era}</span>
+              </div>
+              <p class="text-stone-400">{style.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Silk -->
+  <section class="py-20 bg-[#FFFEF7]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <span class="inline-block font-heading text-sm tracking-[0.3em] text-[#C41E3A] mb-4">MATERIAL</span>
+        <h2 class="font-display text-4xl text-[#1a1a1a] mb-4">The Golden Thread: Silk</h2>
+      </div>
+      
       <div class="grid md:grid-cols-3 gap-8">
-        <article class="group">
-          <div class="aspect-video bg-gradient-to-br from-pink-400 to-rose-600 rounded-xl mb-4 flex items-center justify-center text-5xl">👘</div>
-          <h3 class="font-bold text-stone-900 mb-2">What is Hanfu? A Beginner's Guide</h3>
-          <p class="text-stone-600 text-sm">Understanding the history, styles, and modern revival of traditional Chinese clothing.</p>
-        </article>
-        <article class="group">
-          <div class="aspect-video bg-gradient-to-br from-rose-400 to-pink-600 rounded-xl mb-4 flex items-center justify-center text-5xl">🪡</div>
-          <h3 class="font-bold text-stone-900 mb-2">The Four Great Chinese Embroidery Styles</h3>
-          <p class="text-stone-600 text-sm">Delicate needlework that transformed fabric into art over centuries.</p>
-        </article>
-        <article class="group">
-          <div class="aspect-video bg-gradient-to-br from-amber-300 to-yellow-500 rounded-xl mb-4 flex items-center justify-center text-5xl">🏵️</div>
-          <h3 class="font-bold text-stone-900 mb-2">The Silk Road: Fashion Connection</h3>
-          <p class="text-stone-600 text-sm">How Chinese silk dressed the Roman Empire and beyond.</p>
-        </article>
+        <div class="md:col-span-2">
+          <img
+            src="https://images.unsplash.com/photo-1558171813-4c088753af8f?w=800&q=80"
+            alt="Silk fabric traditional Chinese textile"
+            class="rounded-xl shadow-xl w-full h-80 object-cover"
+          />
+        </div>
+        <div class="space-y-6">
+          <p class="text-lg text-stone-600">
+            For over 3,000 years, China held the secret of silk production as a state secret — punishable by death if revealed. The Silk Road transformed trade and culture across Asia and Europe.
+          </p>
+          <div class="p-6 bg-[#D4AF37]/10 rounded-xl">
+            <h4 class="font-display text-lg text-[#1a1a1a] mb-2">Silk Types</h4>
+            <ul class="space-y-2 text-stone-600">
+              <li>• Satin — smooth, glossy finish</li>
+              <li>• Brocade — raised patterns</li>
+              <li>• Chiffon — lightweight, sheer</li>
+              <li>• Organza — crisp, transparent</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-gradient-to-r from-[#8E4585] to-[#C41E3A]">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="font-display text-3xl md:text-4xl text-white mb-4">Continue Exploring</h2>
+      <p class="text-white/80 text-lg mb-8">
+        Discover how traditional clothing connects to poetry, art, and philosophy.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="/" class="px-6 py-3 bg-white text-[#8E4585] font-semibold rounded-lg hover:bg-stone-100 transition-colors">
+          Back to Home
+        </a>
+        <a href="/poetry" class="px-6 py-3 border border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors">
+          Explore Poetry
+        </a>
+      </div>
+    </div>
+  </section>
+
 </Layout>

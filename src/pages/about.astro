@@ -3,52 +3,139 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="About" description="About China Unveiled - our mission to share authentic Chinese culture with the world.">
-  <section class="bg-gradient-to-br from-stone-800 via-stone-900 to-red-950 text-white py-20">
+  
+  <!-- Hero Section -->
+  <section class="relative py-32 bg-[#1a1a1a] overflow-hidden">
+    <div class="absolute inset-0 opacity-20">
+      <img
+        src="https://images.unsplash.com/photo-1528164344705-47542687000d?w=1920&q=80"
+        alt="Chinese garden"
+        class="w-full h-full object-cover"
+      />
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="inline-flex items-center gap-3 mb-6">
+        <div class="w-16 h-16 rounded-full bg-[#C41E3A] flex items-center justify-center text-white font-display text-3xl seal-effect">
+          中
+        </div>
+      </div>
+      <h1 class="font-display text-5xl md:text-6xl text-white mb-6">About China Unveiled</h1>
+      <p class="text-xl text-stone-300 max-w-2xl mx-auto">
+        Bridging cultures through authentic storytelling
+      </p>
+    </div>
+  </section>
+
+  <!-- Mission Section -->
+  <section class="py-20 bg-[#FFFEF7]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-2xl">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">About China Unveiled</h1>
-        <p class="text-xl text-stone-300">Bridging cultures through authentic storytelling.</p>
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <span class="inline-block font-heading text-sm tracking-[0.3em] text-[#C41E3A] mb-4">OUR MISSION</span>
+          <h2 class="font-display text-4xl text-[#1a1a1a] mb-6">Understanding Over Stereotypes</h2>
+          <p class="text-lg text-stone-600 mb-6">
+            The world knows China, but doesn't <em>understand</em> it. Stereotypes dominate — loud, garish, superficial. But behind the noise lies one of humanity's greatest civilizational achievements: 5,000 years of continuous culture, philosophy, art, and innovation.
+          </p>
+          <p class="text-lg text-stone-600 mb-6">
+            China Unveiled exists to bridge this gap. Whether you're an international businessperson, a language student, a philosophy enthusiast, or simply curious — you deserve accurate, engaging, and respectful information about this remarkable civilization.
+          </p>
+          <div class="p-8 bg-[#C41E3A]/5 rounded-xl border-l-4 border-[#C41E3A]">
+            <p class="font-display text-xl italic text-[#1a1a1a]">
+              "To understand China is to understand ourselves better."
+            </p>
+          </div>
+        </div>
+        <div class="relative">
+          <img
+            src="https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?w=800&q=80"
+            alt="Traditional Chinese architecture"
+            class="rounded-xl shadow-2xl"
+          />
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="py-16 bg-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="prose prose-stone max-w-none">
-        <h2 class="text-2xl font-bold text-stone-900 mb-4">Our Mission</h2>
-        <p class="text-stone-600 mb-6">
-          China Unveiled exists because the world knows China, but doesn't <em>understand</em> it. Stereotypes dominate—loud, garish, superficial. But behind the noise lies one of humanity's greatest civilizational achievements: 5,000 years of continuous culture, philosophy, art, and innovation.
-        </p>
-        <p class="text-stone-600 mb-6">
-          We believe that understanding Chinese culture enriches everyone. Whether you're an international businessperson, a language student, a philosophy enthusiast, or simply curious—you deserve accurate, engaging, and respectful information about this remarkable civilization.
-        </p>
+  <!-- Six Pillars Overview -->
+  <section class="py-20 bg-[#1a1a1a]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="inline-block font-heading text-sm tracking-[0.3em] text-[#D4AF37] mb-4">WHAT WE COVER</span>
+        <h2 class="font-display text-4xl text-white mb-4">Six Pillars of Culture</h2>
+      </div>
 
-        <h2 class="text-2xl font-bold text-stone-900 mb-4 mt-10">What We Cover</h2>
-        <ul class="text-stone-600 space-y-2 mb-6">
-          <li>🍜 <strong>Food</strong> — The eight great cuisines, tea culture, and the philosophy of Chinese cooking</li>
-          <li>📜 <strong>History</strong> — Dynasties, inventions, and the real stories behind China's rise</li>
-          <li>👘 <strong>Clothing</strong> — Hanfu, silk, embroidery, and the aesthetics of traditional dress</li>
-          <li>✒️ <strong>Poetry</strong> — Tang poetry, Song lyrics, and the art of calligraphy</li>
-          <li>🥋 <strong>Martial Arts</strong> — Kung fu styles, Tai Chi, and Traditional Chinese Medicine</li>
-          <li>☯️ <strong>Philosophy</strong> — Daoism, the Tao Te Ching, and ancient wisdom for modern life</li>
-        </ul>
-
-        <h2 class="text-2xl font-bold text-stone-900 mb-4 mt-10">Our Approach</h2>
-        <p class="text-stone-600 mb-6">
-          We write for curious minds, not specialists. Our articles are:
-        </p>
-        <ul class="text-stone-600 space-y-2 mb-6">
-          <li>✅ <strong>Accurate</strong> — Based on primary sources and scholarly consensus</li>
-          <li>✅ <strong>Accessible</strong> — Written for general audiences, not academic journals</li>
-          <li>✅ <strong>Engaging</strong> — Stories, not lectures; discovery, not lecture</li>
-          <li>✅ <strong>Respectful</strong> — No Orientalism, no condescension, no stereotypes</li>
-        </ul>
-
-        <h2 class="text-2xl font-bold text-stone-900 mb-4 mt-10">Contact</h2>
-        <p class="text-stone-600">
-          Have a question, suggestion, or correction? We'd love to hear from you. Connect with us on social media or reach out via our newsletter.
-        </p>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          { name: 'Chinese Cuisine', icon: '🍜', desc: 'Eight great cuisines, tea culture, and the philosophy of Chinese cooking', href: '/food', color: 'bg-orange-600' },
+          { name: 'Chinese History', icon: '📜', desc: 'Dynasties, inventions, and the real stories behind China\'s rise', href: '/history', color: 'bg-amber-600' },
+          { name: 'Traditional Clothing', icon: '👘', desc: 'Hanfu, silk, embroidery, and the aesthetics of traditional dress', href: '/clothing', color: 'bg-pink-600' },
+          { name: 'Poetry & Calligraphy', icon: '✒️', desc: 'Tang poetry, Song lyrics, and the meditative art of brush writing', href: '/poetry', color: 'bg-blue-600' },
+          { name: 'Martial Arts & TCM', icon: '🥋', desc: 'Kung fu styles, Tai Chi, and Traditional Chinese Medicine', href: '/martial', color: 'bg-green-600' },
+          { name: 'Daoist Philosophy', icon: '☯️', desc: 'Tao Te Ching, yin-yang theory, and ancient wisdom for modern life', href: '/daoism', color: 'bg-purple-600' }
+        ].map(pillar => (
+          <a href={pillar.href} class="group bg-stone-800/50 border border-stone-700 rounded-xl p-6 hover:border-[#C41E3A] transition-colors">
+            <div class="flex items-start gap-4">
+              <div class={`w-12 h-12 rounded-full ${pillar.color} flex items-center justify-center text-2xl`}>
+                {pillar.icon}
+              </div>
+              <div>
+                <h3 class="font-display text-xl text-white mb-2 group-hover:text-[#C41E3A] transition-colors">{pillar.name}</h3>
+                <p class="text-stone-400 text-sm">{pillar.desc}</p>
+              </div>
+            </div>
+          </a>
+        ))}
       </div>
     </div>
   </section>
+
+  <!-- Approach Section -->
+  <section class="py-20 bg-[#FFFEF7]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <div class="text-center mb-12">
+          <span class="inline-block font-heading text-sm tracking-[0.3em] text-[#C41E3A] mb-4">OUR APPROACH</span>
+          <h2 class="font-display text-4xl text-[#1a1a1a] mb-4">How We Write</h2>
+          <p class="text-lg text-stone-600">
+            Stories, not lectures. Discovery, not doctrine. We write for curious minds.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          {[
+            { title: 'Accurate', desc: 'Based on primary sources and scholarly consensus, not pop culture myths' },
+            { title: 'Accessible', desc: 'Written for general audiences, not academic journals. No jargon without explanation' },
+            { title: 'Engaging', desc: 'We tell stories. History is drama, philosophy is debate, culture is lived experience' },
+            { title: 'Respectful', desc: 'No Orientalism, no condescension, no stereotypes. China as a civilization, not a spectacle' }
+          ].map(item => (
+            <div class="flex items-start gap-4 p-6 bg-white rounded-xl shadow-sm">
+              <div class="w-8 h-8 rounded-full bg-[#C41E3A]/10 flex items-center justify-center flex-shrink-0">
+                <svg class="w-4 h-4 text-[#C41E3A]" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-[#1a1a1a] mb-1">{item.title}</h3>
+                <p class="text-stone-600 text-sm">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-[#C41E3A]">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="font-display text-3xl md:text-4xl text-white mb-4">Ready to Explore?</h2>
+      <p class="text-red-100 text-lg mb-8">
+        Start your journey through 5,000 years of Chinese civilization.
+      </p>
+      <a href="/" class="inline-block px-8 py-4 bg-white text-[#C41E3A] font-semibold rounded-lg hover:bg-stone-100 transition-colors">
+        Begin Exploring
+      </a>
+    </div>
+  </section>
+
 </Layout>

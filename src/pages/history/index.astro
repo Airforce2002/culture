@@ -2,64 +2,125 @@
 import Layout from '../../layouts/Layout.astro';
 ---
 
-<Layout title="Chinese History" description="Explore 5,000 years of Chinese history - dynasties, emperors, inventions, and the fascinating stories that shaped civilization.">
-  <section class="bg-gradient-to-br from-amber-600 via-orange-700 to-amber-800 text-white py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<Layout title="Chinese History" description="Explore 5,000 years of Chinese history - from ancient dynasties to modern times">
+  
+  <!-- Hero Section -->
+  <section class="relative h-[70vh] flex items-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img
+        src="https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=1920&q=80"
+        alt="Forbidden City Beijing"
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-[#1a1a1a]/95 to-[#D4AF37]/60"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-2xl">
-        <span class="text-amber-200 text-sm font-medium tracking-wider uppercase">History</span>
-        <h1 class="text-4xl md:text-5xl font-bold mt-2 mb-4">Chinese History</h1>
-        <p class="text-xl text-amber-100">From the mythic Xia Dynasty to the modern People's Republic, China's history is the longest continuous civilization on Earth.</p>
+        <span class="inline-block font-heading text-sm tracking-[0.3em] text-[#D4AF37] mb-4">HISTORY</span>
+        <h1 class="font-display text-5xl md:text-6xl text-white mb-6">Chinese History</h1>
+        <p class="text-xl text-stone-300 leading-relaxed">
+          Five thousand years of empire, innovation, and transformation. Dynasties rise, philosophies flourish, and civilizations evolve.
+        </p>
       </div>
     </div>
   </section>
 
-  <section class="py-16 bg-stone-50">
+  <!-- Timeline -->
+  <section class="py-20 bg-[#FFFEF7]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-2 gap-6">
-        <a href="/history/dynasties" class="group bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all">
-          <div class="text-4xl mb-4">🏛️</div>
-          <h3 class="text-xl font-bold text-stone-900 mb-2 group-hover:text-amber-600 transition-colors">Dynasties</h3>
-          <p class="text-stone-600">From Qin to Qing—the rise and fall of imperial China across 2,000 years.</p>
+      <div class="text-center mb-16">
+        <span class="inline-block font-heading text-sm tracking-[0.3em] text-[#C41E3A] mb-4">TIMELINE</span>
+        <h2 class="font-display text-4xl text-[#1a1a1a] mb-4">Major Dynasties</h2>
+        <p class="text-stone-600 max-w-2xl mx-auto">
+          China's imperial history spans over two millennia, marked by remarkable cultural achievements and political transformations.
+        </p>
+      </div>
+
+      <div class="relative">
+        <!-- Timeline Line -->
+        <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-[#C41E3A] via-[#D4AF37] to-[#1a1a1a] hidden md:block"></div>
+
+        <div class="space-y-12">
+          {[
+            { dynasty: 'Xia Dynasty', years: '2070-1600 BCE', desc: 'The legendary first dynasty, ruled by Yu the Great who tamed the floods.', highlight: 'Bronze casting begins' },
+            { dynasty: 'Shang Dynasty', years: '1600-1046 BCE', desc: 'China\'s first confirmed dynasty. Oracle bones reveal early writing.', highlight: 'Writing system invented' },
+            { dynasty: 'Zhou Dynasty', years: '1046-256 BCE', desc: 'The longest dynasty. Confucius and Laozi lived during this era.', highlight: 'Philosophy golden age' },
+            { dynasty: 'Qin Dynasty', years: '221-206 BCE', desc: 'First emperor unified China. Built the Great Wall and Terracotta Army.', highlight: 'Great Wall construction' },
+            { dynasty: 'Han Dynasty', years: '206 BCE-220 CE', desc: 'China\'s golden age. Silk Road trade and paper invention.', highlight: 'Silk Road opens' },
+            { dynasty: 'Tang Dynasty', years: '618-907 CE', desc: 'Peak of Chinese culture. Poetry, art, and cosmopolitanism flourish.', highlight: 'Poetry renaissance' },
+            { dynasty: 'Song Dynasty', years: '960-1279 CE', desc: 'Economic revolution. Paper money, compass, and gunpowder.', highlight: 'Paper money invented' },
+            { dynasty: 'Ming Dynasty', years: '1368-1644 CE', desc: 'Forbidden City built. Admiral Zheng He explored the oceans.', highlight: 'Forbidden City completed' }
+          ].map((item, index) => (
+            <div class={`relative flex flex-col md:flex-row items-center gap-8 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+              <div class="flex-1 text-center md:text-left">
+                <span class="inline-block px-4 py-1 bg-[#C41E3A] text-white text-sm rounded-full mb-2">{item.years}</span>
+                <h3 class="font-display text-2xl text-[#1a1a1a] mb-2">{item.dynasty}</h3>
+                <p class="text-stone-600 mb-2">{item.desc}</p>
+                <span class="inline-block px-3 py-1 bg-[#D4AF37]/10 text-[#B87333] text-sm rounded-full">✨ {item.highlight}</span>
+              </div>
+              <div class="w-8 h-8 rounded-full bg-[#C41E3A] border-4 border-[#FFFEF7] shadow-lg z-10 flex items-center justify-center text-white text-xs font-bold">
+                {index + 1}
+              </div>
+              <div class="flex-1 hidden md:block"></div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Inventions -->
+  <section class="py-20 bg-[#1a1a1a]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="inline-block font-heading text-sm tracking-[0.3em] text-[#D4AF37] mb-4">INNOVATION</span>
+        <h2 class="font-display text-4xl text-white mb-4">Ancient Chinese Inventions</h2>
+        <p class="text-stone-400 max-w-2xl mx-auto">
+          China gave the world some of its most transformative technologies, many invented centuries before reaching the West.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {[
+          { name: 'Paper', year: '105 CE', inventor: 'Cai Lun', desc: 'Revolutionized knowledge preservation and spread' },
+          { name: 'Printing', year: '593 CE', inventor: 'Bi Sheng', desc: 'Movable type printing enabled mass communication' },
+          { name: 'Gunpowder', year: '9th century', inventor: 'Unknown alchemists', desc: 'Originally created for immortality elixirs' },
+          { name: 'Compass', year: '11th century', inventor: 'Shen Kuo', desc: 'Initially used for feng shui, then navigation' },
+          { name: 'Silk', year: '3000 BCE', inventor: 'Lady Xi Ling Shi', desc: 'Secret kept for millennia, punishable by death' },
+          { name: 'Porcelain', year: '600 CE', inventor: 'Tang artisans', desc: 'Known in Europe as "white gold"' }
+        ].map(inv => (
+          <div class="bg-stone-800/50 border border-stone-700 rounded-xl p-6 hover:border-[#C41E3A] transition-colors">
+            <div class="flex items-start justify-between mb-4">
+              <div class="w-14 h-14 rounded-lg bg-[#C41E3A]/20 flex items-center justify-center">
+                <span class="text-2xl">⚙️</span>
+              </div>
+              <span class="text-[#D4AF37] font-heading text-sm">{inv.year}</span>
+            </div>
+            <h3 class="font-display text-xl text-white mb-1">{inv.name}</h3>
+            <p class="text-[#D4AF37] text-sm mb-3">Invented by {inv.inventor}</p>
+            <p class="text-stone-400 text-sm">{inv.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-gradient-to-r from-[#D4AF37] to-[#B87333]">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="font-display text-3xl md:text-4xl text-white mb-4">Continue Your Journey</h2>
+      <p class="text-white/80 text-lg mb-8">
+        Explore other pillars of Chinese culture: philosophy, art, and traditions.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="/" class="px-6 py-3 bg-white text-[#1a1a1a] font-semibold rounded-lg hover:bg-stone-100 transition-colors">
+          Back to Home
         </a>
-        <a href="/history/figures" class="group bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all">
-          <div class="text-4xl mb-4">👑</div>
-          <h3 class="text-xl font-bold text-stone-900 mb-2 group-hover:text-amber-600 transition-colors">Historical Figures</h3>
-          <p class="text-stone-600">Emperors, philosophers, generals, and rebels who shaped China's destiny.</p>
-        </a>
-        <a href="/history/inventions" class="group bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all">
-          <div class="text-4xl mb-4">🔥</div>
-          <h3 class="text-xl font-bold text-stone-900 mb-2 group-hover:text-amber-600 transition-colors">Inventions</h3>
-          <p class="text-stone-600">Paper, printing, gunpowder, compass—the four great gifts to humanity.</p>
-        </a>
-        <a href="/history/modern" class="group bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all">
-          <div class="text-4xl mb-4">🏮</div>
-          <h3 class="text-xl font-bold text-stone-900 mb-2 group-hover:text-amber-600 transition-colors">Modern China</h3>
-          <p class="text-stone-600">The transformation from empire to republic to global power.</p>
+        <a href="/daoism" class="px-6 py-3 border border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors">
+          Explore Philosophy
         </a>
       </div>
     </div>
   </section>
 
-  <section class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl font-bold text-stone-900 mb-8">Featured Articles</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <article class="group">
-          <div class="aspect-video bg-gradient-to-br from-amber-400 to-orange-600 rounded-xl mb-4 flex items-center justify-center text-5xl">📖</div>
-          <h3 class="font-bold text-stone-900 mb-2">The Tang Dynasty: China's Golden Age</h3>
-          <p class="text-stone-600 text-sm">How a dynasty born from chaos created the most cosmopolitan civilization in the world.</p>
-        </article>
-        <article class="group">
-          <div class="aspect-video bg-gradient-to-br from-amber-500 to-yellow-600 rounded-xl mb-4 flex items-center justify-center text-5xl">⚔️</div>
-          <h3 class="font-bold text-stone-900 mb-2">The Three Kingdoms: Fact vs Fiction</h3>
-          <p class="text-stone-600 text-sm">Separating history from the legendary Romance of the Three Kingdoms.</p>
-        </article>
-        <article class="group">
-          <div class="aspect-video bg-gradient-to-br from-stone-500 to-stone-700 rounded-xl mb-4 flex items-center justify-center text-5xl">🏯</div>
-          <h3 class="font-bold text-stone-900 mb-2">The Great Wall: Myths and Reality</h3>
-          <p class="text-stone-600 text-sm">What the Wall really was, who built it, and why it matters today.</p>
-        </article>
-      </div>
-    </div>
-  </section>
 </Layout>

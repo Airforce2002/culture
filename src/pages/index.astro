@@ -3,174 +3,324 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Home" description="Discover authentic Chinese culture - food, history, fashion, poetry, martial arts, and Daoist philosophy">
+
   <!-- Hero Section -->
-  <section class="relative bg-gradient-to-br from-red-900 via-red-800 to-stone-900 text-white overflow-hidden">
-    <div class="absolute inset-0 opacity-10">
-      <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 80 80\"><path fill=\"%23fff\" d=\"M40 0L50 30L80 40L50 50L40 80L30 50L0 40L30 30Z\"/></svg>'); background-size: 60px;"></div>
+  <section class="relative min-h-[90vh] flex items-center overflow-hidden">
+    <!-- Background Image with Overlay -->
+    <div class="absolute inset-0">
+      <img
+        src="https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?w=1920&q=80"
+        alt="Traditional Chinese architecture"
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-[#1a1a1a]/95 via-[#1a1a1a]/80 to-[#C41E3A]/60"></div>
+      <!-- Ink Texture Overlay -->
+      <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 400%22%3E%3Cfilter id=%22noise%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.8%22 numOctaves=%224%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noise)%22/%3E%3C/svg%3E');"></div>
     </div>
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+
+    <!-- Decorative Elements -->
+    <div class="absolute top-20 right-20 w-64 h-64 border border-[#D4AF37]/20 rounded-full hidden lg:block"></div>
+    <div class="absolute bottom-40 right-40 w-32 h-32 border border-[#D4AF37]/10 rounded-full hidden lg:block"></div>
+
+    <!-- Content -->
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
       <div class="max-w-3xl">
-        <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-          Discover the Real <span class="text-amber-400">China</span>
+        <!-- Chinese Character Badge -->
+        <div class="inline-flex items-center gap-3 mb-8 opacity-0 animate-fade-in-up">
+          <div class="w-16 h-16 rounded-full bg-[#C41E3A] flex items-center justify-center text-white font-display text-3xl seal-effect">
+            华
+          </div>
+          <div class="h-px w-16 bg-[#D4AF37]"></div>
+          <span class="font-heading text-sm tracking-[0.3em] text-[#D4AF37]">SINCE 5000 BC</span>
+        </div>
+
+        <!-- Main Heading -->
+        <h1 class="font-display text-5xl md:text-7xl text-white mb-6 leading-tight opacity-0 animate-fade-in-up stagger-1">
+          Discover the<br/>
+          <span class="text-[#D4AF37]">Real</span> China
         </h1>
-        <p class="text-xl md:text-2xl text-stone-200 mb-8 leading-relaxed">
-          Beyond the stereotypes lies 5,000 years of breathtaking culture. Explore food, history, fashion, poetry, martial arts, and philosophy—all explained with depth and authenticity.
+
+        <!-- Subtitle -->
+        <p class="text-xl md:text-2xl text-stone-300 mb-10 leading-relaxed max-w-2xl opacity-0 animate-fade-in-up stagger-2">
+          Beyond stereotypes and headlines lies 5,000 years of breathtaking civilization.
+          Explore authentic culture through six interconnected pillars.
         </p>
-        <div class="flex flex-wrap gap-4">
-          <a href="#explore" class="px-8 py-4 bg-amber-500 text-stone-900 font-semibold rounded-lg hover:bg-amber-400 transition-colors">
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-wrap gap-4 opacity-0 animate-fade-in-up stagger-3">
+          <a href="#explore" class="btn-primary">
             Start Exploring
           </a>
-          <a href="/newsletter" class="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-red-900 transition-colors">
-            Join Newsletter
+          <a href="/about" class="btn-secondary">
+            Our Story
           </a>
         </div>
+
+        <!-- Quote -->
+        <div class="mt-16 pl-6 border-l-2 border-[#C41E3A] opacity-0 animate-fade-in-up stagger-4">
+          <p class="font-display text-lg italic text-stone-400">
+            "Those who cannot remember the past are condemned to repeat it."
+          </p>
+          <p class="text-sm text-[#D4AF37] mt-2">— George Santayana</p>
+        </div>
       </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-stone-400">
+      <span class="text-xs tracking-widest uppercase">Scroll</span>
+      <div class="w-px h-12 bg-gradient-to-b from-[#D4AF37] to-transparent"></div>
     </div>
   </section>
 
   <!-- Stats Bar -->
-  <section class="bg-white border-b border-stone-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+  <section class="bg-[#1a1a1a] py-12 border-y border-[#C41E3A]/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-        <div>
-          <div class="text-3xl font-bold text-red-700">5000+</div>
-          <div class="text-stone-500 text-sm">Years of History</div>
+        <div class="group">
+          <div class="stat-number text-4xl md:text-5xl mb-2">5,000+</div>
+          <div class="text-stone-400 text-sm tracking-wide">Years of History</div>
         </div>
-        <div>
-          <div class="text-3xl font-bold text-red-700">8</div>
-          <div class="text-stone-500 text-sm">Major Cuisines</div>
+        <div class="group">
+          <div class="stat-number text-4xl md:text-5xl mb-2">8</div>
+          <div class="text-stone-400 text-sm tracking-wide">Major Cuisines</div>
         </div>
-        <div>
-          <div class="text-3xl font-bold text-red-700">30K+</div>
-          <div class="text-stone-500 text-sm">Poems Preserved</div>
+        <div class="group">
+          <div class="stat-number text-4xl md:text-5xl mb-2">30K+</div>
+          <div class="text-stone-400 text-sm tracking-wide">Poems Preserved</div>
         </div>
-        <div>
-          <div class="text-3xl font-bold text-red-700">100+</div>
-          <div class="text-stone-500 text-sm">Martial Arts Styles</div>
+        <div class="group">
+          <div class="stat-number text-4xl md:text-5xl mb-2">100+</div>
+          <div class="text-stone-400 text-sm tracking-wide">Martial Styles</div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Six Pillars Section -->
-  <section id="explore" class="py-20 bg-stone-50">
+  <section id="explore" class="py-24 bg-[#FFFEF7] cloud-pattern">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-stone-900 mb-4">Six Pillars of Chinese Culture</h2>
-        <p class="text-lg text-stone-600 max-w-2xl mx-auto">Every aspect of Chinese civilization is interconnected. Explore how food shapes philosophy, how poetry influences fashion, and how ancient wisdom applies today.</p>
+      <!-- Section Header -->
+      <div class="text-center mb-20">
+        <span class="inline-block font-heading text-sm tracking-[0.3em] text-[#C41E3A] mb-4">EXPLORE</span>
+        <h2 class="font-display text-4xl md:text-5xl text-[#1a1a1a] mb-6">Six Pillars of Chinese Culture</h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-transparent via-[#C41E3A] to-transparent mx-auto mb-6"></div>
+        <p class="text-lg text-stone-600 max-w-2xl mx-auto">
+          Every aspect of Chinese civilization is interconnected.
+          Explore how food shapes philosophy, how poetry influences art, and how ancient wisdom remains relevant today.
+        </p>
       </div>
 
+      <!-- Pillar Cards Grid -->
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Food -->
-        <a href="/food" class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
-          <div class="h-48 bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center text-6xl">
-            🍜
+
+        <!-- Food Card -->
+        <a href="/food" class="pillar-card group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl">
+          <div class="relative h-72 overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1563245372-f21724e3856d?w=600&q=80"
+              alt="Traditional Chinese dim sum"
+              class="card-image w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#1a1a1a]/90 via-[#1a1a1a]/40 to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <span class="inline-block px-3 py-1 bg-[#C41E3A] text-white text-xs tracking-wider rounded-full mb-3">CUISINE</span>
+              <h3 class="font-display text-2xl text-white">Chinese Cuisine</h3>
+            </div>
           </div>
           <div class="p-6">
-            <h3 class="text-xl font-bold text-stone-900 mb-2 group-hover:text-red-700 transition-colors">Chinese Cuisine</h3>
-            <p class="text-stone-600 text-sm mb-4">From Sichuan's fire to Cantonese subtlety. Explore the eight great cuisines, street food culture, tea ceremonies, and medicinal cooking.</p>
+            <p class="text-stone-600 mb-4">
+              From Sichuan's fiery dishes to Cantonese subtlety. Discover the philosophy behind eight great regional cuisines, ancient tea ceremonies, and medicinal cooking.
+            </p>
             <div class="flex flex-wrap gap-2">
-              <span class="px-2 py-1 bg-orange-100 text-orange-700 text-xs rounded-full">8 Cuisines</span>
-              <span class="px-2 py-1 bg-orange-100 text-orange-700 text-xs rounded-full">Tea Culture</span>
-              <span class="px-2 py-1 bg-orange-100 text-orange-700 text-xs rounded-full">Street Food</span>
+              <span class="px-3 py-1 bg-orange-50 text-orange-700 text-xs rounded-full">8 Cuisines</span>
+              <span class="px-3 py-1 bg-orange-50 text-orange-700 text-xs rounded-full">Tea Culture</span>
+              <span class="px-3 py-1 bg-orange-50 text-orange-700 text-xs rounded-full">Street Food</span>
             </div>
           </div>
         </a>
 
-        <!-- History -->
-        <a href="/history" class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
-          <div class="h-48 bg-gradient-to-br from-amber-600 to-orange-700 flex items-center justify-center text-6xl">
-            📜
+        <!-- History Card -->
+        <a href="/history" class="pillar-card group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl">
+          <div class="relative h-72 overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=600&q=80"
+              alt="Forbidden City Beijing"
+              class="card-image w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#1a1a1a]/90 via-[#1a1a1a]/40 to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <span class="inline-block px-3 py-1 bg-[#D4AF37] text-[#1a1a1a] text-xs tracking-wider rounded-full mb-3">HISTORY</span>
+              <h3 class="font-display text-2xl text-white">Chinese History</h3>
+            </div>
           </div>
           <div class="p-6">
-            <h3 class="text-xl font-bold text-stone-900 mb-2 group-hover:text-red-700 transition-colors">Chinese History</h3>
-            <p class="text-stone-600 text-sm mb-4">Dynasties rise and fall. Emperors dream and scheme. Discover the fascinating stories behind 5,000 years of civilization.</p>
+            <p class="text-stone-600 mb-4">
+              Dynasties rise and fall. Empires dream and crumble. Discover the fascinating stories behind 5,000 years of civilization, from the Xia to the Qing.
+            </p>
             <div class="flex flex-wrap gap-2">
-              <span class="px-2 py-1 bg-amber-100 text-amber-700 text-xs rounded-full">Dynasties</span>
-              <span class="px-2 py-1 bg-amber-100 text-amber-700 text-xs rounded-full">Emperors</span>
-              <span class="px-2 py-1 bg-amber-100 text-amber-700 text-xs rounded-full">Inventions</span>
+              <span class="px-3 py-1 bg-amber-50 text-amber-700 text-xs rounded-full">Dynasties</span>
+              <span class="px-3 py-1 bg-amber-50 text-amber-700 text-xs rounded-full">Emperors</span>
+              <span class="px-3 py-1 bg-amber-50 text-amber-700 text-xs rounded-full">Inventions</span>
             </div>
           </div>
         </a>
 
-        <!-- Clothing -->
-        <a href="/clothing" class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
-          <div class="h-48 bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center text-6xl">
-            👘
+        <!-- Clothing Card -->
+        <a href="/clothing" class="pillar-card group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl">
+          <div class="relative h-72 overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80"
+              alt="Traditional Chinese hanfu clothing"
+              class="card-image w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#1a1a1a]/90 via-[#1a1a1a]/40 to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <span class="inline-block px-3 py-1 bg-pink-600 text-white text-xs tracking-wider rounded-full mb-3">FASHION</span>
+              <h3 class="font-display text-2xl text-white">Traditional Clothing</h3>
+            </div>
           </div>
           <div class="p-6">
-            <h3 class="text-xl font-bold text-stone-900 mb-2 group-hover:text-red-700 transition-colors">Traditional Clothing</h3>
-            <p class="text-stone-600 text-sm mb-4">The elegance of hanfu, the allure of cheongsam, the craftsmanship of silk. Explore China's textile heritage.</p>
+            <p class="text-stone-600 mb-4">
+              The elegance of hanfu, the allure of qipao, the craftsmanship of silk. Explore China's textile heritage and modern revival movements.
+            </p>
             <div class="flex flex-wrap gap-2">
-              <span class="px-2 py-1 bg-pink-100 text-pink-700 text-xs rounded-full">Hanfu</span>
-              <span class="px-2 py-1 bg-pink-100 text-pink-700 text-xs rounded-full">Cheongsam</span>
-              <span class="px-2 py-1 bg-pink-100 text-pink-700 text-xs rounded-full">Silk</span>
+              <span class="px-3 py-1 bg-pink-50 text-pink-700 text-xs rounded-full">Hanfu</span>
+              <span class="px-3 py-1 bg-pink-50 text-pink-700 text-xs rounded-full">Cheongsam</span>
+              <span class="px-3 py-1 bg-pink-50 text-pink-700 text-xs rounded-full">Silk</span>
             </div>
           </div>
         </a>
 
-        <!-- Poetry -->
-        <a href="/poetry" class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
-          <div class="h-48 bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-6xl">
-            ✒️
+        <!-- Poetry Card -->
+        <a href="/poetry" class="pillar-card group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl">
+          <div class="relative h-72 overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?w=600&q=80"
+              alt="Chinese calligraphy and poetry"
+              class="card-image w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#1a1a1a]/90 via-[#1a1a1a]/40 to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <span class="inline-block px-3 py-1 bg-[#26619C] text-white text-xs tracking-wider rounded-full mb-3">LITERATURE</span>
+              <h3 class="font-display text-2xl text-white">Poetry & Calligraphy</h3>
+            </div>
           </div>
           <div class="p-6">
-            <h3 class="text-xl font-bold text-stone-900 mb-2 group-hover:text-red-700 transition-colors">Poetry & Calligraphy</h3>
-            <p class="text-stone-600 text-sm mb-4">Where words become art. Tang poetry, Song lyrics, and the meditative practice of Chinese calligraphy.</p>
+            <p class="text-stone-600 mb-4">
+              Where words become art. Tang poetry's grace, Song lyrics' depth, and the meditative practice of Chinese calligraphy that spans millennia.
+            </p>
             <div class="flex flex-wrap gap-2">
-              <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">Tang Poetry</span>
-              <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">Calligraphy</span>
-              <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">Poets</span>
+              <span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs rounded-full">Tang Poetry</span>
+              <span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs rounded-full">Calligraphy</span>
+              <span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs rounded-full">Poets</span>
             </div>
           </div>
         </a>
 
-        <!-- Martial Arts -->
-        <a href="/martial" class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
-          <div class="h-48 bg-gradient-to-br from-green-600 to-emerald-700 flex items-center justify-center text-6xl">
-            🥋
+        <!-- Martial Arts Card -->
+        <a href="/martial" class="pillar-card group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl">
+          <div class="relative h-72 overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1555597673-b21d5c935865?w=600&q=80"
+              alt="Chinese martial arts wushu"
+              class="card-image w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#1a1a1a]/90 via-[#1a1a1a]/40 to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <span class="inline-block px-3 py-1 bg-[#00A86B] text-white text-xs tracking-wider rounded-full mb-3">MARTIAL</span>
+              <h3 class="font-display text-2xl text-white">Martial Arts & TCM</h3>
+            </div>
           </div>
           <div class="p-6">
-            <h3 class="text-xl font-bold text-stone-900 mb-2 group-hover:text-red-700 transition-colors">Martial Arts & TCM</h3>
-            <p class="text-stone-600 text-sm mb-4">From Shaolin's thundering fists to Tai Chi's flowing grace. Plus the wisdom of Traditional Chinese Medicine.</p>
+            <p class="text-stone-600 mb-4">
+              From Shaolin's thundering fists to Tai Chi's flowing grace. Plus the ancient wisdom of Traditional Chinese Medicine and acupuncture.
+            </p>
             <div class="flex flex-wrap gap-2">
-              <span class="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full">Kung Fu</span>
-              <span class="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full">Tai Chi</span>
-              <span class="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full">TCM</span>
+              <span class="px-3 py-1 bg-green-50 text-green-700 text-xs rounded-full">Kung Fu</span>
+              <span class="px-3 py-1 bg-green-50 text-green-700 text-xs rounded-full">Tai Chi</span>
+              <span class="px-3 py-1 bg-green-50 text-green-700 text-xs rounded-full">TCM</span>
             </div>
           </div>
         </a>
 
-        <!-- Daoism -->
-        <a href="/daoism" class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
-          <div class="h-48 bg-gradient-to-br from-teal-600 to-cyan-700 flex items-center justify-center text-6xl">
-            ☯️
+        <!-- Daoism Card -->
+        <a href="/daoism" class="pillar-card group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl">
+          <div class="relative h-72 overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1508962914676-134849a727f0?w=600&q=80"
+              alt="Yin Yang philosophy"
+              class="card-image w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#1a1a1a]/90 via-[#1a1a1a]/40 to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <span class="inline-block px-3 py-1 bg-[#8E4585] text-white text-xs tracking-wider rounded-full mb-3">PHILOSOPHY</span>
+              <h3 class="font-display text-2xl text-white">Daoist Philosophy</h3>
+            </div>
           </div>
           <div class="p-6">
-            <h3 class="text-xl font-bold text-stone-900 mb-2 group-hover:text-red-700 transition-colors">Daoist Philosophy</h3>
-            <p class="text-stone-600 text-sm mb-4">The wisdom of Laozi, the poetry of Zhuangzi, the eternal dance of yin and yang. Discover China's spiritual heart.</p>
+            <p class="text-stone-600 mb-4">
+              The wisdom of Laozi, the poetry of Zhuangzi, the eternal dance of yin and yang. Discover China's spiritual heart and modern applications.
+            </p>
             <div class="flex flex-wrap gap-2">
-              <span class="px-2 py-1 bg-teal-100 text-teal-700 text-xs rounded-full">Tao Te Ching</span>
-              <span class="px-2 py-1 bg-teal-100 text-teal-700 text-xs rounded-full">Zhuangzi</span>
-              <span class="px-2 py-1 bg-teal-100 text-teal-700 text-xs rounded-full">Yin & Yang</span>
+              <span class="px-3 py-1 bg-purple-50 text-purple-700 text-xs rounded-full">Tao Te Ching</span>
+              <span class="px-3 py-1 bg-purple-50 text-purple-700 text-xs rounded-full">Zhuangzi</span>
+              <span class="px-3 py-1 bg-purple-50 text-purple-700 text-xs rounded-full">Yin & Yang</span>
             </div>
           </div>
         </a>
+
       </div>
+    </div>
+  </section>
+
+  <!-- Featured Quote Section -->
+  <section class="relative py-32 overflow-hidden">
+    <div class="absolute inset-0">
+      <img
+        src="https://images.unsplash.com/photo-1528164344705-47542687000d?w=1920&q=80"
+        alt="Traditional Chinese garden"
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-[#1a1a1a]/90"></div>
+    </div>
+    <div class="relative max-w-4xl mx-auto px-4 text-center">
+      <div class="text-8xl text-[#C41E3A]/30 font-display mb-4">道</div>
+      <blockquote class="font-display text-3xl md:text-4xl text-white leading-relaxed mb-8">
+        "The journey of a thousand miles begins with a single step."
+      </blockquote>
+      <cite class="text-[#D4AF37] font-heading tracking-widest">
+        — LAOZI, TAO TE CHING
+      </cite>
     </div>
   </section>
 
   <!-- Newsletter Section -->
-  <section class="py-20 bg-red-900 text-white">
+  <section class="py-24 bg-[#C41E3A]">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl font-bold mb-4">Get Weekly Cultural Insights</h2>
-      <p class="text-stone-300 mb-8">Join thousands of curious minds exploring Chinese culture. Every week: one deep dive, curated stories, and exclusive content.</p>
-      <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-        <input type="email" placeholder="your@email.com" class="flex-1 px-4 py-3 rounded-lg text-stone-900" />
-        <button type="submit" class="px-6 py-3 bg-amber-500 text-stone-900 font-semibold rounded-lg hover:bg-amber-400 transition-colors">
-          Subscribe
+      <div class="inline-flex items-center gap-3 mb-6">
+        <div class="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center text-white text-2xl">📜</div>
+      </div>
+      <h2 class="font-display text-3xl md:text-4xl text-white mb-4">Get Weekly Cultural Insights</h2>
+      <p class="text-red-100 mb-8 text-lg">
+        Join thousands of curious minds exploring Chinese culture. Every week: deep dives, curated stories, and exclusive content delivered to your inbox.
+      </p>
+      <form class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+        <input
+          type="email"
+          placeholder="Enter your email"
+          required
+          class="flex-1 px-6 py-4 rounded-lg text-[#1a1a1a] placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-[#D4AF37]"
+        />
+        <button
+          type="submit"
+          class="px-8 py-4 bg-[#1a1a1a] text-white font-semibold tracking-wide rounded-lg hover:bg-[#2d2d2d] transition-colors"
+        >
+          SUBSCRIBE
         </button>
       </form>
+      <p class="text-red-200 text-sm mt-4">No spam. Unsubscribe anytime.</p>
     </div>
   </section>
+
 </Layout>

@@ -2,64 +2,215 @@
 import Layout from '../../layouts/Layout.astro';
 ---
 
-<Layout title="Daoist Philosophy" description="Explore Daoist philosophy - the Tao Te Ching, Zhuangzi's wisdom, and the practical application of Daoism in modern life.">
-  <section class="bg-gradient-to-br from-teal-600 via-cyan-600 to-teal-700 text-white py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<Layout title="Daoist Philosophy" description="Discover Daoist philosophy - the wisdom of Laozi, Zhuangzi, yin-yang theory, and China's spiritual heritage">
+  
+  <!-- Hero Section -->
+  <section class="relative h-[70vh] flex items-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img
+        src="https://images.unsplash.com/photo-1508962914676-134849a727f0?w=1920&q=80"
+        alt="Yin Yang symbol"
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-[#1a1a1a]/95 to-[#8E4585]/60"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-2xl">
-        <span class="text-teal-200 text-sm font-medium tracking-wider uppercase">Philosophy</span>
-        <h1 class="text-4xl md:text-5xl font-bold mt-2 mb-4">Daoist Philosophy</h1>
-        <p class="text-xl text-teal-100">The way of nature, the art of letting go. China's native philosophy offers timeless wisdom for modern life.</p>
+        <span class="inline-block font-heading text-sm tracking-[0.3em] text-[#D4AF37] mb-4">PHILOSOPHY</span>
+        <h1 class="font-display text-5xl md:text-6xl text-white mb-6">Daoist Philosophy</h1>
+        <p class="text-xl text-stone-300 leading-relaxed">
+          The wisdom of Laozi, the poetry of Zhuangzi, and the eternal dance of yin and yang. Discover China's spiritual heart.
+        </p>
       </div>
     </div>
   </section>
 
-  <section class="py-16 bg-stone-50">
+  <!-- Introduction -->
+  <section class="py-20 bg-[#FFFEF7]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-2 gap-6">
-        <a href="/daoism/taoteching" class="group bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all">
-          <div class="text-4xl mb-4">📖</div>
-          <h3 class="text-xl font-bold text-stone-900 mb-2 group-hover:text-teal-600 transition-colors">Tao Te Ching</h3>
-          <p class="text-stone-600">Laozi's 5,000-character masterpiece—the foundational text of Daoism and one of the world's great spiritual works.</p>
+      <div class="grid lg:grid-cols-2 gap-16 items-center mb-20">
+        <div>
+          <span class="inline-block font-heading text-sm tracking-[0.3em] text-[#C41E3A] mb-4">THE WAY</span>
+          <h2 class="font-display text-4xl text-[#1a1a1a] mb-6">What is Daoism?</h2>
+          <p class="text-lg text-stone-600 mb-6">
+            Daoism (道教, Dàojiào) is both a philosophy and a religion that emerged in ancient China. At its core is the concept of the Dao (道) — "The Way" — an ineffable force that underlies all existence.
+          </p>
+          <p class="text-lg text-stone-600 mb-6">
+            Daoism teaches harmony with nature, spontaneity, and non-action (无为, wúwéi) — not doing nothing, but doing what comes naturally without forcing outcomes.
+          </p>
+          <div class="p-6 bg-[#8E4585]/5 rounded-xl border-l-4 border-[#8E4585]">
+            <p class="font-display text-xl italic text-[#1a1a1a]">
+              "The Tao that can be told is not the eternal Tao."
+            </p>
+            <p class="text-sm text-stone-500 mt-2">— Laozi, Tao Te Ching</p>
+          </div>
+        </div>
+        <div class="relative">
+          <img
+            src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=800&q=80"
+            alt="Chinese landscape painting"
+            class="rounded-xl shadow-2xl"
+          />
+          <div class="absolute -bottom-6 -left-6 bg-[#8E4585] text-white p-6 rounded-lg">
+            <div class="stat-number text-3xl mb-1">道</div>
+            <div class="text-sm tracking-wide">The Way</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Core Concepts -->
+      <div class="grid md:grid-cols-2 gap-8">
+        {[
+          {
+            concept: 'Wu Wei (无为)',
+            desc: 'Non-action or effortless action. Not passive resignation, but acting in harmony with the natural flow of the Dao.',
+            practice: 'Meditation, letting go, accepting what is'
+          },
+          {
+            concept: 'Ziran (自然)',
+            desc: 'Naturalness, spontaneity. Being true to one\'s own nature without artificiality or pretense.',
+            practice: 'Simple living, authentic expression'
+          },
+          {
+            concept: 'Pu (朴)',
+            desc: 'The uncarved block. Simplicity and purity before social conventions shape us.',
+            practice: 'Returning to simplicity, uncluttering life'
+          },
+          {
+            concept: 'De (德)',
+            desc: 'Virtue or power. The cultivation of inner virtue that naturally radiates outward.',
+            practice: 'Self-cultivation, ethical living'
+          }
+        ].map(item => (
+          <div class="bg-white rounded-xl shadow-lg p-8">
+            <h3 class="font-display text-2xl text-[#8E4585] mb-4">{item.concept}</h3>
+            <p class="text-stone-600 mb-4">{item.desc}</p>
+            <div class="pt-4 border-t border-stone-100">
+              <span class="text-sm text-stone-500">Modern practice: </span>
+              <span class="text-sm text-[#1a1a1a]">{item.practice}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Yin Yang Section -->
+  <section class="py-20 bg-[#1a1a1a]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <span class="inline-block font-heading text-sm tracking-[0.3em] text-[#D4AF37] mb-4">SYMBOLISM</span>
+        <h2 class="font-display text-4xl text-white mb-4">Yin and Yang</h2>
+        <p class="text-stone-400 max-w-2xl mx-auto">
+          The yin-yang symbol (太极图) represents the fundamental Chinese understanding of reality: complementary opposites that interpenetrate and transform into each other.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="flex justify-center">
+          <div class="relative w-72 h-72">
+            <!-- Yin-Yang SVG -->
+            <svg viewBox="0 0 200 200" class="w-full h-full">
+              <circle cx="100" cy="100" r="95" fill="#FFFEF7" stroke="#D4AF37" stroke-width="2"/>
+              <path d="M100,5 A95,95 0 0,1 100,195 A47.5,47.5 0 0,1 100,100 A47.5,47.5 0 0,0 100,5" fill="#1a1a1a"/>
+              <circle cx="100" cy="47.5" r="10" fill="#FFFEF7"/>
+              <circle cx="100" cy="152.5" r="10" fill="#1a1a1a"/>
+              <circle cx="100" cy="47.5" r="3" fill="#1a1a1a"/>
+              <circle cx="100" cy="152.5" r="3" fill="#FFFEF7"/>
+            </svg>
+          </div>
+        </div>
+        <div class="space-y-6">
+          <div class="grid grid-cols-2 gap-4">
+            <div class="p-6 bg-stone-800/50 rounded-xl">
+              <h4 class="font-display text-lg text-white mb-2">Yin (阴)</h4>
+              <p class="text-stone-400 text-sm">Dark, receptive, feminine</p>
+              <div class="mt-3 text-xs text-stone-500">
+                <span class="inline-block px-2 py-1 bg-stone-700 rounded mr-1">Night</span>
+                <span class="inline-block px-2 py-1 bg-stone-700 rounded mr-1">Moon</span>
+                <span class="inline-block px-2 py-1 bg-stone-700 rounded">Water</span>
+              </div>
+            </div>
+            <div class="p-6 bg-stone-800/50 rounded-xl">
+              <h4 class="font-display text-lg text-white mb-2">Yang (阳)</h4>
+              <p class="text-stone-400 text-sm">Light, active, masculine</p>
+              <div class="mt-3 text-xs text-stone-500">
+                <span class="inline-block px-2 py-1 bg-stone-700 rounded mr-1">Day</span>
+                <span class="inline-block px-2 py-1 bg-stone-700 rounded mr-1">Sun</span>
+                <span class="inline-block px-2 py-1 bg-stone-700 rounded">Fire</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 bg-[#8E4585]/20 rounded-xl border border-[#8E4585]/30">
+            <p class="text-stone-300 text-sm leading-relaxed">
+              The core principle: <em>yin contains the seed of yang, and yang contains the seed of yin.</em> Nothing is purely one or the other. Health comes from balance; imbalance creates disease. This wisdom applies to body, mind, and society.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Texts -->
+  <section class="py-20 bg-[#FFFEF7]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="font-display text-3xl text-[#1a1a1a] mb-4">Foundational Texts</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white rounded-xl shadow-lg p-8">
+          <div class="flex items-start gap-4 mb-4">
+            <div class="w-12 h-12 rounded-full bg-[#8E4585]/20 flex items-center justify-center text-2xl">📜</div>
+            <div>
+              <h3 class="font-display text-2xl text-[#1a1a1a]">Tao Te Ching</h3>
+              <span class="text-[#8E4585] text-sm">道德经</span>
+            </div>
+          </div>
+          <p class="text-stone-600 mb-4">
+            Attributed to the legendary figure Laozi, this 81-chapter text is the foundational scripture of Daoism. Its poetic verses explore the nature of the Dao, the art of leadership, and the path of wisdom.
+          </p>
+          <blockquote class="p-4 bg-stone-50 rounded-lg italic text-stone-700 text-sm">
+            "When the great Dao is forgotten, benevolence and righteousness arise."
+          </blockquote>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-lg p-8">
+          <div class="flex items-start gap-4 mb-4">
+            <div class="w-12 h-12 rounded-full bg-[#00A86B]/20 flex items-center justify-center text-2xl">📚</div>
+            <div>
+              <h3 class="font-display text-2xl text-[#1a1a1a]">Zhuangzi</h3>
+              <span class="text-[#00A86B] text-sm">庄子</span>
+            </div>
+          </div>
+          <p class="text-stone-600 mb-4">
+            The most important Daoist text after the Tao Te Ching. Zhuangzi's witty, paradoxical stories explore freedom, spontaneity, and the limitations of human understanding.
+          </p>
+          <blockquote class="p-4 bg-stone-50 rounded-lg italic text-stone-700 text-sm">
+            "The fish trap exists because of the fish. Once you've gotten the fish you can forget the trap."
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-gradient-to-r from-[#8E4585] to-[#1a1a1a]">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <div class="text-6xl mb-6">☯️</div>
+      <h2 class="font-display text-3xl md:text-4xl text-white mb-4">Begin Your Practice</h2>
+      <p class="text-white/80 text-lg mb-8">
+        Daoism offers timeless wisdom for modern life. Start with stillness.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="/" class="px-6 py-3 bg-white text-[#8E4585] font-semibold rounded-lg hover:bg-stone-100 transition-colors">
+          Back to Home
         </a>
-        <a href="/daoism/zhuangzi" class="group bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all">
-          <div class="text-4xl mb-4">🦋</div>
-          <h3 class="text-xl font-bold text-stone-900 mb-2 group-hover:text-teal-600 transition-colors">Zhuangzi</h3>
-          <p class="text-stone-600">The playful philosopher whose parables and stories challenge everything we think we know.</p>
-        </a>
-        <a href="/daoism/yinyang" class="group bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all">
-          <div class="text-4xl mb-4">☯️</div>
-          <h3 class="text-xl font-bold text-stone-900 mb-2 group-hover:text-teal-600 transition-colors">Yin & Yang</h3>
-          <p class="text-stone-600">The cosmic dance of opposites—how apparent contradictions create harmony in nature.</p>
-        </a>
-        <a href="/daoism/modern" class="group bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all">
-          <div class="text-4xl mb-4">🌿</div>
-          <h3 class="text-xl font-bold text-stone-900 mb-2 group-hover:text-teal-600 transition-colors">Daoism Today</h3>
-          <p class="text-stone-600">Applying ancient wisdom to modern challenges—stress, creativity, leadership, and well-being.</p>
+        <a href="/martial" class="px-6 py-3 border border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors">
+          Explore Martial Arts
         </a>
       </div>
     </div>
   </section>
 
-  <section class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl font-bold text-stone-900 mb-8">Featured Articles</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <article class="group">
-          <div class="aspect-video bg-gradient-to-br from-teal-400 to-cyan-600 rounded-xl mb-4 flex items-center justify-center text-5xl">🌀</div>
-          <h3 class="font-bold text-stone-900 mb-2">Tao Te Ching: Chapter 1 Explained</h3>
-          <p class="text-stone-600 text-sm">The most famous opening lines in Eastern philosophy decoded.</p>
-        </article>
-        <article class="group">
-          <div class="aspect-video bg-gradient-to-br from-cyan-400 to-blue-600 rounded-xl mb-4 flex items-center justify-center text-5xl">🦋</div>
-          <h3 class="font-bold text-stone-900 mb-2">The Butterfly Dream: Zhuangzi's Famous Parable</h3>
-          <p class="text-stone-600 text-sm">Was Zhuangzi a butterfly dreaming he was a man, or a man dreaming he was a butterfly?</p>
-        </article>
-        <article class="group">
-          <div class="aspect-video bg-gradient-to-br from-emerald-400 to-teal-600 rounded-xl mb-4 flex items-center justify-center text-5xl">🌊</div>
-          <h3 class="font-bold text-stone-900 mb-2">Wu Wei: The Art of Non-Action</h3>
-          <p class="text-stone-600 text-sm">The Daoist concept that sounds passive but is actually the ultimate effectiveness.</p>
-        </article>
-      </div>
-    </div>
-  </section>
 </Layout>

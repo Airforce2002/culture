@@ -2,64 +2,167 @@
 import Layout from '../../layouts/Layout.astro';
 ---
 
-<Layout title="Poetry & Calligraphy" description="Explore Chinese poetry - Tang Dynasty verses, Song lyrics, and the meditative art of calligraphy.">
-  <section class="bg-gradient-to-br from-blue-600 via-indigo-600 to-blue-700 text-white py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<Layout title="Poetry & Calligraphy" description="Discover the art of Chinese poetry and calligraphy - Tang dynasty verses, Song lyrics, and the meditative practice of brush writing">
+  
+  <!-- Hero Section -->
+  <section class="relative h-[70vh] flex items-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img
+        src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?w=1920&q=80"
+        alt="Chinese calligraphy brush writing"
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-[#1a1a1a]/95 to-[#26619C]/60"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-2xl">
-        <span class="text-blue-200 text-sm font-medium tracking-wider uppercase">Literature</span>
-        <h1 class="text-4xl md:text-5xl font-bold mt-2 mb-4">Poetry & Calligraphy</h1>
-        <p class="text-xl text-blue-100">In ancient China, poetry was not just literature—it was the highest art form, practiced by emperors and peasants alike.</p>
+        <span class="inline-block font-heading text-sm tracking-[0.3em] text-[#D4AF37] mb-4">LITERATURE</span>
+        <h1 class="font-display text-5xl md:text-6xl text-white mb-6">Poetry & Calligraphy</h1>
+        <p class="text-xl text-stone-300 leading-relaxed">
+          Where words become art. Tang poetry's grace, Song lyrics' depth, and the meditative practice of brush and ink.
+        </p>
       </div>
     </div>
   </section>
 
-  <section class="py-16 bg-stone-50">
+  <!-- Poetry Introduction -->
+  <section class="py-20 bg-[#FFFEF7]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-2 gap-6">
-        <a href="/poetry/tang" class="group bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all">
-          <div class="text-4xl mb-4">📜</div>
-          <h3 class="text-xl font-bold text-stone-900 mb-2 group-hover:text-blue-600 transition-colors">Tang Poetry</h3>
-          <p class="text-stone-600">The golden age of Chinese poetry—Li Bai's flights of fantasy, Du Fu's social conscience.</p>
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <span class="inline-block font-heading text-sm tracking-[0.3em] text-[#C41E3A] mb-4">THE ART OF WORDS</span>
+        <h2 class="font-display text-4xl text-[#1a1a1a] mb-6">Poetry as a Way of Life</h2>
+        <p class="text-lg text-stone-600 mb-8">
+          In ancient China, poetry was not merely literature — it was a required skill for civil service exams, a form of social currency among the elite, and a spiritual practice for cultivation of the self.
+        </p>
+        <div class="p-8 bg-[#26619C]/5 rounded-2xl border border-[#26619C]/20">
+          <p class="font-display text-2xl italic text-[#1a1a1a] leading-relaxed">
+            "静夜思<br/>
+            床前明月光<br/>
+            疑是地上霜<br/>
+            举头望明月<br/>
+            低头思故乡"
+          </p>
+          <p class="text-[#26619C] mt-4 font-semibold">— Li Bai, "Quiet Night Thought"</p>
+        </div>
+      </div>
+
+      <!-- Major Poets -->
+      <div class="grid md:grid-cols-2 gap-8">
+        {[
+          {
+            name: 'Li Bai',
+            dynasty: 'Tang Dynasty',
+            years: '701-762',
+            desc: 'The "Immortal Banished from Earth." Known for romantic, transcendent verses that capture nature\'s grandeur.',
+            work: '"Climbing High," "Quiet Night Thought"',
+            color: 'bg-blue-600'
+          },
+          {
+            name: 'Du Fu',
+            dynasty: 'Tang Dynasty',
+            years: '712-770',
+            desc: 'The "Sage of Poetry." His works span personal grief to political commentary, reflecting turbulent times.',
+            work: '"Three Officers," "Spring Prospect"',
+            color: 'bg-indigo-600'
+          },
+          {
+            name: 'Su Shi',
+            dynasty: 'Song Dynasty',
+            years: '1037-1101',
+            desc: 'A polymath poet, painter, calligrapher, and statesman. Known for ci (lyric poetry) and philosophical depth.',
+            work: '"Red Cliffs," "Mid-Autumn"',
+            color: 'bg-cyan-600'
+          },
+          {
+            name: 'Li Qingzhao',
+            dynasty: 'Song Dynasty',
+            years: '1084-1155',
+            desc: 'The greatest female poet in Chinese history. Her ci poetry captures love, loss, and longing with delicate precision.',
+            work: '"Remembrance of Twin Sisters"',
+            color: 'bg-teal-600'
+          }
+        ].map(poet => (
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+            <div class={`h-3 ${poet.color}`}></div>
+            <div class="p-6">
+              <div class="flex items-start justify-between mb-4">
+                <div>
+                  <h3 class="font-display text-2xl text-[#1a1a1a]">{poet.name}</h3>
+                  <span class="text-stone-500 text-sm">{poet.dynasty}, {poet.years}</span>
+                </div>
+                <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 text-xl">📜</div>
+              </div>
+              <p class="text-stone-600 mb-4">{poet.desc}</p>
+              <div class="pt-4 border-t border-stone-100">
+                <span class="text-sm text-stone-500">Famous works: </span>
+                <span class="text-sm text-[#26619C]">{poet.work}</span>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Calligraphy Section -->
+  <section class="py-20 bg-[#1a1a1a]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <span class="inline-block font-heading text-sm tracking-[0.3em] text-[#D4AF37] mb-4">THE ART OF THE BRUSH</span>
+          <h2 class="font-display text-4xl text-white mb-6">Chinese Calligraphy</h2>
+          <p class="text-lg text-stone-400 mb-6">
+            Calligraphy (书法, shūfǎ) is considered one of the highest art forms in Chinese culture. More than mere writing, it is a meditation in motion — the dance of brush, ink, water, and paper.
+          </p>
+          <div class="space-y-4">
+            {[
+              { name: 'Zhuan Shu (篆书)', desc: 'Seal script, ancient and formal, used for seals and official documents' },
+              { name: 'Li Shu (隶书)', desc: 'Official script, with squared strokes and distinctive horizontal flair' },
+              { name: 'Kai Shu (楷书)', desc: 'Regular script, the most readable and widely used today' },
+              { name: 'Xing Shu (行书)', desc: 'Running script, flowing between regular and cursive' },
+              { name: 'Cao Shu (草书)', desc: 'Grass script, highly stylized and expressive' }
+            ].map(style => (
+              <div class="flex items-start gap-4 p-4 bg-stone-800/50 rounded-lg">
+                <div class="w-2 h-2 rounded-full bg-[#26619C] mt-2"></div>
+                <div>
+                  <span class="font-semibold text-white">{style.name}</span>
+                  <p class="text-stone-400 text-sm">{style.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div class="relative">
+          <img
+            src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80"
+            alt="Chinese calligraphy art"
+            class="rounded-xl shadow-2xl"
+          />
+          <div class="absolute -bottom-6 -right-6 bg-[#26619C] text-white p-6 rounded-lg">
+            <div class="stat-number text-3xl mb-1">4</div>
+            <div class="text-sm tracking-wide">Treasures of the Study</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-gradient-to-r from-[#26619C] to-[#1a1a1a]">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="font-display text-3xl md:text-4xl text-white mb-4">Continue Your Journey</h2>
+      <p class="text-white/80 text-lg mb-8">
+        Explore more pillars of Chinese culture: philosophy, martial arts, and history.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="/" class="px-6 py-3 bg-white text-[#26619C] font-semibold rounded-lg hover:bg-stone-100 transition-colors">
+          Back to Home
         </a>
-        <a href="/poetry/song" class="group bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all">
-          <div class="text-4xl mb-4">🎋</div>
-          <h3 class="text-xl font-bold text-stone-900 mb-2 group-hover:text-blue-600 transition-colors">Song Lyrics</h3>
-          <p class="text-stone-600">The Song Dynasty innovation—poetry set to music, from Su Shi's bold verses to Li Qingzhao's grace.</p>
-        </a>
-        <a href="/poetry/calligraphy" class="group bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all">
-          <div class="text-4xl mb-4">✒️</div>
-          <h3 class="text-xl font-bold text-stone-900 mb-2 group-hover:text-blue-600 transition-colors">Calligraphy</h3>
-          <p class="text-stone-600">Where writing becomes art—the four styles of calligraphy from seal script to cursive.</p>
-        </a>
-        <a href="/poetry/poets" class="group bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all">
-          <div class="text-4xl mb-4">👤</div>
-          <h3 class="text-xl font-bold text-stone-900 mb-2 group-hover:text-blue-600 transition-colors">The Poets</h3>
-          <p class="text-stone-600">Biographies of China's greatest wordsmiths and the stories behind their masterpieces.</p>
+        <a href="/martial" class="px-6 py-3 border border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors">
+          Explore Martial Arts
         </a>
       </div>
     </div>
   </section>
 
-  <section class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl font-bold text-stone-900 mb-8">Featured Articles</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <article class="group">
-          <div class="aspect-video bg-gradient-to-br from-blue-400 to-indigo-600 rounded-xl mb-4 flex items-center justify-center text-5xl">🌙</div>
-          <h3 class="font-bold text-stone-900 mb-2">Li Bai's "Quiet Night Thought" - Full Analysis</h3>
-          <p class="text-stone-600 text-sm">Line-by-line translation and cultural context of China's most famous moon poem.</p>
-        </article>
-        <article class="group">
-          <div class="aspect-video bg-gradient-to-br from-indigo-400 to-purple-600 rounded-xl mb-4 flex items-center justify-center text-5xl">🖌️</div>
-          <h3 class="font-bold text-stone-900 mb-2">Chinese Calligraphy for Beginners</h3>
-          <p class="text-stone-600 text-sm">Start your journey with the four calligraphy styles, essential tools, and first strokes.</p>
-        </article>
-        <article class="group">
-          <div class="aspect-video bg-gradient-to-br from-slate-400 to-slate-700 rounded-xl mb-4 flex items-center justify-center text-5xl">📝</div>
-          <h3 class="font-bold text-stone-900 mb-2">Du Fu: China's Greatest Poet</h3>
-          <p class="text-stone-600 text-sm">The life and legacy of the poet who captured the human condition.</p>
-        </article>
-      </div>
-    </div>
-  </section>
 </Layout>

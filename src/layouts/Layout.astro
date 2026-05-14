@@ -18,37 +18,43 @@ const { title, description = "Discover authentic Chinese culture - food, history
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title} | China Unveiled</title>
   </head>
-  <body class="bg-stone-50 text-stone-800">
+  <body class="bg-[#FFFEF7] text-[#1a1a1a]">
     <!-- Navigation -->
-    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-stone-200">
+    <nav class="sticky top-0 z-50 bg-[#FFFEF7]/95 backdrop-blur-md border-b border-[#C41E3A]/10">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16">
-          <a href="/" class="flex items-center gap-2">
-            <span class="text-2xl">🏯</span>
-            <span class="font-semibold text-lg text-red-700">China Unveiled</span>
+        <div class="flex justify-between items-center h-20">
+          <a href="/" class="flex items-center gap-3 group">
+            <div class="w-10 h-10 rounded-full bg-[#C41E3A] flex items-center justify-center text-white font-display text-lg seal-effect">
+              中
+            </div>
+            <span class="font-heading text-lg tracking-wider text-[#1a1a1a] group-hover:text-[#C41E3A] transition-colors">
+              CHINA UNVEILED
+            </span>
           </a>
-          <div class="hidden md:flex items-center gap-6 text-sm font-medium">
-            <a href="/food" class="text-stone-600 hover:text-red-700 transition-colors">Food</a>
-            <a href="/history" class="text-stone-600 hover:text-red-700 transition-colors">History</a>
-            <a href="/clothing" class="text-stone-600 hover:text-red-700 transition-colors">Clothing</a>
-            <a href="/poetry" class="text-stone-600 hover:text-red-700 transition-colors">Poetry</a>
-            <a href="/martial" class="text-stone-600 hover:text-red-700 transition-colors">Martial Arts</a>
-            <a href="/daoism" class="text-stone-600 hover:text-red-700 transition-colors">Daoism</a>
-            <a href="/about" class="px-4 py-2 bg-red-700 text-white rounded-lg hover:bg-red-800 transition-colors">About</a>
+          <div class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide">
+            <a href="/food" class="nav-link text-[#2d2d2d] hover:text-[#C41E3A] transition-colors">Food</a>
+            <a href="/history" class="nav-link text-[#2d2d2d] hover:text-[#C41E3A] transition-colors">History</a>
+            <a href="/clothing" class="nav-link text-[#2d2d2d] hover:text-[#C41E3A] transition-colors">Clothing</a>
+            <a href="/poetry" class="nav-link text-[#2d2d2d] hover:text-[#C41E3A] transition-colors">Poetry</a>
+            <a href="/martial" class="nav-link text-[#2d2d2d] hover:text-[#C41E3A] transition-colors">Martial Arts</a>
+            <a href="/daoism" class="nav-link text-[#2d2d2d] hover:text-[#C41E3A] transition-colors">Daoism</a>
+            <a href="/about" class="px-6 py-2 bg-[#C41E3A] text-white rounded hover:bg-[#9B1B30] transition-colors">
+              About
+            </a>
           </div>
         </div>
       </div>
     </nav>
 
     <!-- Mobile Menu -->
-    <div class="md:hidden bg-white border-b border-stone-200 px-4 py-3">
-      <div class="flex flex-wrap gap-3 text-sm">
-        <a href="/food" class="px-3 py-1 bg-stone-100 rounded-full">Food</a>
-        <a href="/history" class="px-3 py-1 bg-stone-100 rounded-full">History</a>
-        <a href="/clothing" class="px-3 py-1 bg-stone-100 rounded-full">Clothing</a>
-        <a href="/poetry" class="px-3 py-1 bg-stone-100 rounded-full">Poetry</a>
-        <a href="/martial" class="px-3 py-1 bg-stone-100 rounded-full">Martial Arts</a>
-        <a href="/daoism" class="px-3 py-1 bg-stone-100 rounded-full">Daoism</a>
+    <div class="md:hidden bg-[#FFFEF7] border-b border-[#C41E3A]/10 px-4 py-4">
+      <div class="flex flex-wrap gap-2 justify-center">
+        <a href="/food" class="px-4 py-2 bg-[#C41E3A]/5 text-[#C41E3A] rounded-full text-sm font-medium">Food</a>
+        <a href="/history" class="px-4 py-2 bg-[#C41E3A]/5 text-[#C41E3A] rounded-full text-sm font-medium">History</a>
+        <a href="/clothing" class="px-4 py-2 bg-[#C41E3A]/5 text-[#C41E3A] rounded-full text-sm font-medium">Clothing</a>
+        <a href="/poetry" class="px-4 py-2 bg-[#C41E3A]/5 text-[#C41E3A] rounded-full text-sm font-medium">Poetry</a>
+        <a href="/martial" class="px-4 py-2 bg-[#C41E3A]/5 text-[#C41E3A] rounded-full text-sm font-medium">Martial</a>
+        <a href="/daoism" class="px-4 py-2 bg-[#C41E3A]/5 text-[#C41E3A] rounded-full text-sm font-medium">Daoism</a>
       </div>
     </div>
 
@@ -58,43 +64,62 @@ const { title, description = "Discover authentic Chinese culture - food, history
     </main>
 
     <!-- Footer -->
-    <footer class="bg-stone-900 text-stone-300 mt-20">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+    <footer class="bg-[#1a1a1a] text-[#FFFEF7] pt-20 pb-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-12 mb-16">
           <div>
-            <h3 class="text-white font-semibold mb-4">Explore</h3>
-            <ul class="space-y-2 text-sm">
-              <li><a href="/food" class="hover:text-white transition-colors">Chinese Food</a></li>
-              <li><a href="/history" class="hover:text-white transition-colors">History</a></li>
-              <li><a href="/clothing" class="hover:text-white transition-colors">Traditional Clothing</a></li>
+            <h3 class="font-heading text-sm tracking-widest mb-6 text-[#D4AF37]">EXPLORE</h3>
+            <ul class="space-y-3 text-sm">
+              <li><a href="/food" class="text-stone-400 hover:text-white transition-colors">Chinese Cuisine</a></li>
+              <li><a href="/history" class="text-stone-400 hover:text-white transition-colors">History</a></li>
+              <li><a href="/clothing" class="text-stone-400 hover:text-white transition-colors">Traditional Clothing</a></li>
             </ul>
           </div>
           <div>
-            <h3 class="text-white font-semibold mb-4">Culture</h3>
-            <ul class="space-y-2 text-sm">
-              <li><a href="/poetry" class="hover:text-white transition-colors">Poetry & Calligraphy</a></li>
-              <li><a href="/martial" class="hover:text-white transition-colors">Martial Arts & TCM</a></li>
-              <li><a href="/daoism" class="hover:text-white transition-colors">Daoist Philosophy</a></li>
+            <h3 class="font-heading text-sm tracking-widest mb-6 text-[#D4AF37]">CULTURE</h3>
+            <ul class="space-y-3 text-sm">
+              <li><a href="/poetry" class="text-stone-400 hover:text-white transition-colors">Poetry & Calligraphy</a></li>
+              <li><a href="/martial" class="text-stone-400 hover:text-white transition-colors">Martial Arts & TCM</a></li>
+              <li><a href="/daoism" class="text-stone-400 hover:text-white transition-colors">Daoist Philosophy</a></li>
             </ul>
           </div>
           <div>
-            <h3 class="text-white font-semibold mb-4">Resources</h3>
-            <ul class="space-y-2 text-sm">
-              <li><a href="/about" class="hover:text-white transition-colors">About Us</a></li>
-              <li><a href="/newsletter" class="hover:text-white transition-colors">Newsletter</a></li>
+            <h3 class="font-heading text-sm tracking-widest mb-6 text-[#D4AF37]">RESOURCES</h3>
+            <ul class="space-y-3 text-sm">
+              <li><a href="/about" class="text-stone-400 hover:text-white transition-colors">About Us</a></li>
+              <li><a href="/newsletter" class="text-stone-400 hover:text-white transition-colors">Newsletter</a></li>
             </ul>
           </div>
           <div>
-            <h3 class="text-white font-semibold mb-4">Follow</h3>
-            <ul class="space-y-2 text-sm">
-              <li><a href="#" class="hover:text-white transition-colors">YouTube</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Instagram</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Twitter</a></li>
-            </ul>
+            <h3 class="font-heading text-sm tracking-widest mb-6 text-[#D4AF37]">CONNECT</h3>
+            <div class="flex gap-4">
+              <a href="#" class="w-10 h-10 rounded-full border border-stone-600 flex items-center justify-center text-stone-400 hover:border-[#C41E3A] hover:text-[#C41E3A] transition-colors">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+              </a>
+              <a href="#" class="w-10 h-10 rounded-full border border-stone-600 flex items-center justify-center text-stone-400 hover:border-[#C41E3A] hover:text-[#C41E3A] transition-colors">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/></svg>
+              </a>
+              <a href="#" class="w-10 h-10 rounded-full border border-stone-600 flex items-center justify-center text-stone-400 hover:border-[#C41E3A] hover:text-[#C41E3A] transition-colors">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              </a>
+            </div>
           </div>
         </div>
-        <div class="border-t border-stone-800 mt-8 pt-8 text-center text-sm">
-          <p>&copy; 2026 China Unveiled. Sharing authentic Chinese culture with the world.</p>
+
+        <!-- Traditional Divider -->
+        <div class="border-t border-stone-800 pt-8">
+          <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full bg-[#C41E3A] flex items-center justify-center text-white text-sm seal-effect">
+                中
+              </div>
+              <span class="font-display text-stone-400">China Unveiled</span>
+            </div>
+            <p class="text-stone-500 text-sm text-center md:text-right">
+              Sharing authentic Chinese culture with the world.<br/>
+              <span class="text-stone-600">Images from Unsplash (CC0 License)</span>
+            </p>
+          </div>
         </div>
       </div>
     </footer>
