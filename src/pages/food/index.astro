@@ -1,0 +1,98 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const categories = [
+  {
+    name: 'The Eight Cuisines',
+    slug: 'cuisines',
+    description: 'From fiery Sichuan to delicate Cantonese, explore the eight great regional cuisines that define Chinese cooking.',
+    color: 'orange'
+  },
+  {
+    name: 'Tea Culture',
+    slug: 'tea',
+    description: 'More than a beverage—tea is a philosophy, an art form, and a way of life that spans millennia.',
+    color: 'green'
+  },
+  {
+    name: 'Street Food',
+    slug: 'street-food',
+    description: 'The heart and soul of Chinese food culture, from steaming bao to sizzling skewers.',
+    color: 'red'
+  },
+  {
+    name: 'Festive Foods',
+    slug: 'festive',
+    description: 'Every Chinese festival has its culinary traditions—dumplings for New Year, mooncakes for Mid-Autumn.',
+    color: 'amber'
+  }
+];
+---
+
+<Layout title="Chinese Food" description="Explore authentic Chinese cuisine - from regional specialties to street food, tea culture to festive traditions.">
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-orange-600 via-red-600 to-orange-700 text-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl">
+        <span class="text-orange-200 text-sm font-medium tracking-wider uppercase">Food Culture</span>
+        <h1 class="text-4xl md:text-5xl font-bold mt-2 mb-4">Chinese Cuisine</h1>
+        <p class="text-xl text-orange-100">China's food is as diverse as its geography. From the volcanic peppers of Sichuan to the fresh seafood of Guangdong, every region tells its own culinary story.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-gradient-to-r from-orange-50 to-red-50 rounded-2xl p-8 md:p-12">
+        <div class="flex flex-col md:flex-row gap-8 items-center">
+          <div class="text-8xl">🥢</div>
+          <div>
+            <h2 class="text-2xl font-bold text-stone-900 mb-3">"Food is the first necessity of the people."</h2>
+            <p class="text-stone-600 mb-4">— Ancient Chinese Proverb</p>
+            <p class="text-stone-700">Chinese civilization has always placed food at the center of life. With 1.4 billion people and 56 ethnic groups, China's culinary landscape is the most diverse on Earth. This section explores it all—eight cuisines, thousands of dishes, and the stories behind them.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories Grid -->
+  <section class="py-16 bg-stone-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold text-stone-900 mb-8">Explore Food Culture</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        {categories.map(cat => (
+          <a href={`/food/${cat.slug}`} class="group bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all">
+            <h3 class="text-xl font-bold text-stone-900 mb-2 group-hover:text-orange-600 transition-colors">{cat.name}</h3>
+            <p class="text-stone-600">{cat.description}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Coming Soon Articles -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold text-stone-900 mb-8">Featured Articles</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <article class="group">
+          <div class="aspect-video bg-gradient-to-br from-orange-400 to-red-500 rounded-xl mb-4 flex items-center justify-center text-5xl group-hover:scale-105 transition-transform">🍜</div>
+          <h3 class="font-bold text-stone-900 mb-2 group-hover:text-orange-600 transition-colors">The Eight Great Cuisines: A Complete Guide</h3>
+          <p class="text-stone-600 text-sm">Understanding the regional differences that make Chinese food endlessly fascinating.</p>
+        </article>
+        <article class="group">
+          <div class="aspect-video bg-gradient-to-br from-green-400 to-emerald-500 rounded-xl mb-4 flex items-center justify-center text-5xl group-hover:scale-105 transition-transform">🍵</div>
+          <h3 class="font-bold text-stone-900 mb-2 group-hover:text-orange-600 transition-colors">The Art of Chinese Tea Ceremony</h3>
+          <p class="text-stone-600 text-sm">Gongfu cha and the meditative practice of brewing the perfect cup.</p>
+        </article>
+        <article class="group">
+          <div class="aspect-video bg-gradient-to-br from-amber-400 to-orange-500 rounded-xl mb-4 flex items-center justify-center text-5xl group-hover:scale-105 transition-transform">🥟</div>
+          <h3 class="font-bold text-stone-900 mb-2 group-hover:text-orange-600 transition-colors">Dumplings: More Than a Food</h3>
+          <p class="text-stone-600 text-sm">The cultural significance of jiaozi in Chinese New Year celebrations.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+</Layout>
